@@ -11,3 +11,12 @@ services:
     volumes:
       - /home/bfa
     restart: always
+
+
+  tsa2-api:
+    image: bfaar/tsa2api:test
+    ports:
+      - 8546:80
+    volumes:
+      - /home/bfa      
+    restart: always
