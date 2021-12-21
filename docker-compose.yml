@@ -3,6 +3,15 @@
 version: '3.7'
 
 services:
+      
+  nodo-bfa:
+    image: bfaar/nodo:test
+    ports:
+      - 30303:30303
+    volumes:
+      - /home/bfa
+    restart: always
+
 
   tsa2-api:
     image: bfaar/tsa2api:test
@@ -20,14 +29,4 @@ services:
     restart: always
     depends_on:
       - nodo-bfa 
-      
-  nodo-bfa:
-    image: bfaar/nodo:test
-    ports:
-      - 30303:30303
-    volumes:
-      - /home/bfa
-    restart: always
-
-
    
