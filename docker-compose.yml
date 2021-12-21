@@ -1,0 +1,13 @@
+# BFA-Try-in-PWD
+
+version: '3.1'
+
+services:
+
+  nodo-bfa:
+    image: bfaar/nodo:test
+    ports:
+      - 30303:30303
+    volumes:
+      - /home/bfa
+    restart: always
