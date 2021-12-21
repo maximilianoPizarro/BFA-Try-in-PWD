@@ -16,8 +16,14 @@ services:
     volumes:
       - /home/bfa      
     restart: always
+
   nodo-bfa:
-     extends:
-        file: nodo-bfa.yml
-        service: nodo-bfa    
-   
+      extends:
+        service: nodo-bfa   
+      image: bfaar/nodo:test
+      working_dir: /home/bfa/bin/
+      ports:
+        - 8545:8545
+      volumes:
+        - /home/bfa
+      restart: always
