@@ -1,6 +1,6 @@
 # BFA-Try-in-PWD
 
-version: '2'
+version: '3.7'
 services:
   tsa2-api:
     image: bfaar/tsa2api:test
