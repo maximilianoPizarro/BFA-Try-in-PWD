@@ -9,7 +9,7 @@ services:
     working_dir: /home/bfa/bin/
     hostname: nodo-bfa
     ports:
-      - 30303:30303
+      - 8545:8545
     volumes:
       - /home/bfa
     restart: always
