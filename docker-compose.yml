@@ -6,6 +6,9 @@ services:
       
   nodo-bfa:
     image: bfaar/nodo:test
+    working_dir: /home/bfa/bin/
+    hostname: nodo-bfa
+    command: sh -c "./start && ./attach.sh admin.stopRPC() && ./attach.sh admin.startRPC("0.0.0.0", 8545, "*", "eth,net,web3,clique,admin,miner,personal")" 
     ports:
       - 30303:30303
     volumes:
