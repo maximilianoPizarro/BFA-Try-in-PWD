@@ -7,7 +7,6 @@ services:
   nodo-bfa:
     image: bfaar/nodo:test
     working_dir: /home/bfa/bin/
-    hostname: nodo-bfa
     ports:
       - 8545:8545
     volumes:
@@ -18,10 +17,10 @@ services:
   tsa2-api:
     image: bfaar/tsa2api:test
     ports:
-      - 3000:80
+      - 3000:3000
     working_dir: /home/bfa/tsa/api
     environment:
-      - GETH_HOST=http://nodo-bfa:8545
+      - GETH_HOST=http://0.0.0.0:8545
       - CONTRACT_ADDRESS_TEST="0xFc0f01A88bD08b988173A2354952087C9492d947"
       - CONTRACT_ABI_PATH="${PWD}/api.json"
       - GETH_ACCOUNT_PASSWORD=
@@ -29,6 +28,4 @@ services:
     volumes:
       - /home/bfa      
     restart: always
-    depends_on:
-      - nodo-bfa 
    
