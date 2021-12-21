@@ -18,12 +18,10 @@ services:
     restart: always
 
   nodo-bfa:
-      extends:
-        service: nodo-bfa   
-      image: bfaar/nodo:test
-      working_dir: /home/bfa/bin/
-      ports:
-        - 8545:8545
-      volumes:
-        - /home/bfa
-      restart: always
+    image: bfaar/nodo:test
+    working_dir: /home/bfa/bin/
+    ports:
+      - 8545:8545
+    volumes:
+      - /home/bfa
+    restart: always
