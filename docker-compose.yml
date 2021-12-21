@@ -16,7 +16,11 @@ services:
   tsa2-api:
     image: bfaar/tsa2api:test
     ports:
-      - 8546:80
+      - 8545:80
+    working_dir: /home/bfa/tsa/api
+    environment:
+      - GET_HOST=http://nodo-bfa:8545    
+    command: npm run serve
     volumes:
       - /home/bfa      
     restart: always
