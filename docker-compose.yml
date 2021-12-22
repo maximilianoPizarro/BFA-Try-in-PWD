@@ -2,6 +2,25 @@
 
 version: '3.7'
 services:
+#NODO BFA TESTNET
+  nodo-bfa:
+    image: bfaar/nodo:test
+    working_dir: /home/bfa/bfa/bin
+    ports:
+      - 8545:8545
+    expose:
+      - 8545
+      - 30303      
+    volumes:
+      - home-bfa:/home/bfa
+    restart: always
+    networks:
+      - testnet
+    tsa2-api:
+      - backend    
+      
+#TSA2 API
+
   tsa2-api:
     image: bfaar/tsa2api:test
     ports:
@@ -14,14 +33,15 @@ services:
       - GETH_ACCOUNT_PASSWORD=
     command: npm run serve
     volumes:
-      - /home/bfa      
+      - home-bfa:/home/bfa      
     restart: always
+    networks:
+      - testnet
+    depends_on:
+      - nodo-bfa    
 
-  nodo-bfa:
-    image: bfaar/nodo:test
-    working_dir: /home/bfa/bin/
-    ports:
-      - 8545:8545
-    volumes:
-      - /home/bfa
-    restart: always
+volumes:
+  home-bfa: {}
+    
+networks:
+  testnet: {}
