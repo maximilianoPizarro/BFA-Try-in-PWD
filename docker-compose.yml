@@ -11,7 +11,7 @@ services:
       - 3000:3000
     working_dir: /home/bfa/tsa/api
     environment:
-      - GETH_HOST=http://nodo-bfa:8545
+      - GETH_HOST=nodo-bfa
       - CONTRACT_ADDRESS_TEST="0xFc0f01A88bD08b988173A2354952087C9492d947"
       - CONTRACT_ABI_PATH="/home/bfa/tsa/api/api.json"
       - GETH_ACCOUNT_PASSWORD=
