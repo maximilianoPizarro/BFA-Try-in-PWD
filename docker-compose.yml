@@ -38,6 +38,4 @@ services:
       - testnet   
           
 networks:
-  testnet:
-    # Use a custom driver
-    driver: custom-driver-1
+  testnet: {}
