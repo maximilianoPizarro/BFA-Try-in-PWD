@@ -1,6 +1,6 @@
 # BFA-Try-in-PWD
 
-version: '2.2'
+version: '3.7'
 services:
 
 #TSA2 API
@@ -23,7 +23,7 @@ services:
       - testnet
     depends_on:
       - nodo-bfa    
-      
+,      
 #NODO BFA TESTNET
 
   nodo-bfa:
