@@ -15,9 +15,7 @@ services:
       - home-bfa:/home/bfa
     restart: always
     networks:
-      - testnet
-    tsa2-api:
-      - backend    
+      - testnet   
       
 #TSA2 API
 
