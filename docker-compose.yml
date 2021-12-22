@@ -11,7 +11,7 @@ services:
       - 3000:3000
     working_dir: /home/bfa/tsa/api
     environment:
-      - GETH_HOST=http://127.0.0.1:8545
+      - GETH_HOST=http://172.18.0.1:8545
       - CONTRACT_ADDRESS_TEST="0xFc0f01A88bD08b988173A2354952087C9492d947"
       - CONTRACT_ABI_PATH="/home/bfa/tsa/api/api.json"
       - GETH_ACCOUNT_PASSWORD=
