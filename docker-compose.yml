@@ -1,6 +1,6 @@
 # BFA-Try-in-PWD
 
-version: '3.9'
+version: '3.3'
 services:
 
 #TSA2 API
