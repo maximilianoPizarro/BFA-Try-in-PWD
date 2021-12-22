@@ -23,7 +23,7 @@ services:
       - testnet
     depends_on:
       - nodo-bfa    
-,      
+      
 #NODO BFA TESTNET
 
   nodo-bfa:
