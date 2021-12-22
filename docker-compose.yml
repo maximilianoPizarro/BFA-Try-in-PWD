@@ -29,7 +29,7 @@ services:
     environment:
       - GETH_HOST=http://nodo-bfa:8545
       - CONTRACT_ADDRESS_TEST="0xFc0f01A88bD08b988173A2354952087C9492d947"
-      - CONTRACT_ABI_PATH="${PWD}/api.json"
+      - CONTRACT_ABI_PATH="/home/bfa/tsa/api/api.json"
       - GETH_ACCOUNT_PASSWORD=
     command: npm run serve
     volumes:
